@@ -27,6 +27,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class KubernetesKind {
+  public static KubernetesKind CLUSTER_ROLE = new KubernetesKind("clusterRole");
+  public static KubernetesKind CLUSTER_ROLE_BINDING = new KubernetesKind("clusterRoleBinding");
   public static KubernetesKind CONFIG_MAP = new KubernetesKind("configMap", "cm");
   public static KubernetesKind CONTROLLER_REVISION = new KubernetesKind("controllerRevision");
   public static KubernetesKind DAEMON_SET = new KubernetesKind("daemonSet", "ds");
@@ -36,12 +38,15 @@ public class KubernetesKind {
   public static KubernetesKind JOB = new KubernetesKind("job");
   public static KubernetesKind POD = new KubernetesKind("pod", "po");
   public static KubernetesKind REPLICA_SET = new KubernetesKind("replicaSet", "rs");
+  public static KubernetesKind ROLE = new KubernetesKind("role");
+  public static KubernetesKind ROLE_BINDING = new KubernetesKind("roleBinding");
   public static KubernetesKind NAMESPACE = new KubernetesKind("namespace", "ns");
   public static KubernetesKind NETWORK_POLICY = new KubernetesKind("networkPolicy", "netpol");
   public static KubernetesKind PERSISTENT_VOLUME = new KubernetesKind("persistentVolume", "pv");
   public static KubernetesKind PERSISTENT_VOLUME_CLAIM = new KubernetesKind("persistentVolumeClaim", "pvc");
   public static KubernetesKind SECRET = new KubernetesKind("secret");
   public static KubernetesKind SERVICE = new KubernetesKind("service", "svc");
+  public static KubernetesKind SERVICE_ACCOUNT = new KubernetesKind("serviceAccount", "sa");
   public static KubernetesKind STATEFUL_SET = new KubernetesKind("statefulSet");
 
   private final String name;
